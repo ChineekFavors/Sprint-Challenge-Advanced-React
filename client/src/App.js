@@ -12,7 +12,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-       <h1>hello</h1>
+       <h1>Women's World Cup players ranking </h1>
        <Display />
         
       </div>

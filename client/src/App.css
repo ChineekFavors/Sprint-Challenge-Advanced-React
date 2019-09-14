@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 }
+.playerDiv{
+  border-bottom:  1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+ 
+}
+
+
+
+
+
+
+
