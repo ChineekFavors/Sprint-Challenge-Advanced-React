@@ -27,6 +27,9 @@ class Display extends React.Component {
 		return (
 			
 			<div>
+				<button className='button' 
+					type="button">darkMode
+				</button>
 				{this.state.players.map( player => ( 
 					<div className='playerDiv' key={player.id}>
 						<h3>{player.name}</h3>
