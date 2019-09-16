@@ -1,5 +1,7 @@
 import React from "react";
 
+import {useLocalStorage} from './hooks/useLocalStorage.js';
+
 
 import '../App.css';
 
@@ -21,7 +23,7 @@ class Display extends React.Component {
   }
 
 	render(){
-		console.log(this.state.players)
+		
 		return (
 			
 			<div>
@@ -30,7 +32,6 @@ class Display extends React.Component {
 						<h3>{player.name}</h3>
 						<h3>{player.country}</h3>
 						<h3>{player.searches}</h3>
-
 					</div>
 				))}
 				
