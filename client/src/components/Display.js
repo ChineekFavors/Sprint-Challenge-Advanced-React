@@ -14,24 +14,24 @@ class Display extends React.Component {
 		super();
 		this.state = {
 			players : [],
-			
+			useDarkMode
 		};
-		
+			
 	}
 
 	componentDidMount = () => {
     fetch('http://localhost:5000/api/players')
       .then(res => res.json())
-      .then(data => this.setState({players : data}))
+			.then(data => this.setState({players : data }))
       .catch(error => console.log('there was a problem', error))
 	}
+	componentDidUpdate = () => {
 	
+	}
 
 	
 
 		
-	
-
 	render(){
 		
 		return (
