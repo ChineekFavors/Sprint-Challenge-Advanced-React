@@ -1,16 +1,20 @@
 import React from "react";
 
-import {useLocalStorage} from './hooks/useLocalStorage.js';
 
+import {useDarkMode} from './hooks/useDarkMode.js';
 
 import '../App.css';
 
 
+
+
 class Display extends React.Component {
+
 	constructor(){
 		super();
 		this.state = {
-			players : []
+			players : [],
+			
 		};
 		
 	}
@@ -20,16 +24,24 @@ class Display extends React.Component {
       .then(res => res.json())
       .then(data => this.setState({players : data}))
       .catch(error => console.log('there was a problem', error))
-  }
+	}
+	
+
+	
+
+		
+	
 
 	render(){
 		
 		return (
 			
 			<div>
-				<button className='button' 
+				<button className='button'
+					onClick={this.handleClick} 
 					type="button">darkMode
 				</button>
+
 				{this.state.players.map( player => ( 
 					<div className='playerDiv' key={player.id}>
 						<h3>{player.name}</h3>
@@ -37,9 +49,7 @@ class Display extends React.Component {
 						<h3>{player.searches}</h3>
 					</div>
 				))}
-				
-				
-				
+					
 			</div>
 		);
 	}
